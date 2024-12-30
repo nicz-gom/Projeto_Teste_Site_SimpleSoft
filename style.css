@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Maven pro', sans-serif;
+
+    box-sizing: border-box;
+}
+
+body{
+    /*Paleta de Cores*/
+    --color1: #D2E9FF;
+    --color2: #000000;
+    --color3: #0661b0;
+    --color4: gray;
+    --color5: #ffffff;
+    --color6: #b8cfe4;
+    --color7: #008afb;
+
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+
+    height: calc(100vh - 62px);
+}
+
+/*Parte superior do site*/
+
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    border-bottom: 2px solid var(--color3);
+}
+
+.acess{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 60px;
+
+    background-color: var(--color1);
+}
+
+.acess a{
+    padding: 10px;
+    border-radius: 10px;
+
+    text-decoration: none;
+    color: var(--color3);
+
+    font-weight: 500;
+
+    transition: color 0.7s linear;
+    transition: 1s;
+}
+
+.acess a:hover{
+    color: var(--color5);
+    background-color: var(--color7);
+}
+
+.logo{
+    max-width: 60px;
+    width: 100%;
+
+}
+
+/*Fim da parte superior*/
+
+
+/*Parte da Direita*/
+.left{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left h1{
+    font-size: 30px;
+    text-align: center;
+
+    margin-bottom: 5%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+}
+
+input{
+    padding-left: 10px;
+}
+
+input, button {
+    height: 32px;
+    width: 60%;
+    margin-bottom: 15px;
+    border: 1px solid var(--color4);
+    border-radius: 5px;
+
+    transition: 0.9s;
+}
+
+.terms{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+
+    width: 60%;
+}
+
+.terms p{
+    margin-left: 10px;
+}
+
+input[type="checkbox"]{
+    width: 20px;
+    margin: 0;
+}
+
+button{
+    border: none;
+    background-color: var(--color3);
+    color: var(--color5);
+
+    transition: background-color 0.6s linear; 
+    transition: 0.9s;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(1.06);
+    background-color: var(--color7);
+}
+
+.register{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 10px;
+}
+
+.register p{
+    font-weight: bold;
+}
+
+.register a{
+    text-decoration: none;
+    color: var(--color4);
+    margin-left: 5px;
+}
+
+
+/*Fim da Parte da Direita*/
+
+
+/*Parte da Esquerda*/
+.rigth{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    background-color: var(--color6);
+}
+
+.rigth .office{
+    border-radius: 10px;
+    border: 2px solid var(--color3);
+
+    max-width: 600px;
+    width: 80%;
+}
+
+.rigth h1{
+    text-align: center;
+    font-size: 30px;
+    color: var(--color3);
+}
+
+.rigth p{
+    margin: 10px;
+    color: var(--color5);
+
+    font-weight: 500;
+}
+
+
+/*Fim da Parte da Esquerda*/
+
+@media(max-width: 800px){
+    input[type="text"], input[type="gmail"], input[type="password"]{
+        width: 80%;
+    }
+
+    button{
+        width: 80%;
+    }
+
+    .terms{
+        width: 80%;
+    }
+}
+
+@media(max-width: 600px){
+    .container{
+        display: flex;
+        flex-direction: column ;
+
+        height: 100%;
+    }
+
+    .office{
+        margin-top: 20px;
+    }
+
+}
+
+@media(max-width: 480px) {
+    .acess a{
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 370px){
+    .logo{
+        width: 0;
+    }
+}
